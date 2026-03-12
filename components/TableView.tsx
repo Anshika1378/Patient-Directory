@@ -14,7 +14,7 @@ export default function TableView({ data }: Props) {
     if (value.includes("rash")) return "bg-pink-200";
     return "bg-gray-200";
   }
-  function getEmptyNa(value?: string) {
+  function getEmptyNa(value?: string | null | undefined) {
     return !value ? "text-red-500 font-medium" : "";
   }
   return (
@@ -61,7 +61,7 @@ export default function TableView({ data }: Props) {
               </td>
 
               <td className="border px-4 py-2">
-                <span className={getEmptyNa(p.contact?.[0]?.address)}>
+                <span className={getEmptyNa(p.contact?.[0]?.address )}>
                   {p.contact?.[0]?.address || "NA"}
                 </span>
               </td>

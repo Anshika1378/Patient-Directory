@@ -1,36 +1,87 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Patient Directory App
 
-## Getting Started
+A responsive patient directory built using **Next.js, TypeScript, and Tailwind CSS**.  
+This application displays patient records with **search, filter, sorting, pagination, and multiple view modes**.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🚀 Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- 🔍 **Search Patients**
+  - Search patients by name
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- 🩺 **Filter by Medical Issue**
+  - Fever
+  - Headache
+  - Sore Throat
+  - Sprained Ankle
+  - Rash
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- 🔢 **Sort by Age**
+  - Ascending
+  - Descending
 
-## Learn More
+- 📄 **Pagination**
+  - Navigate through patient records
 
-To learn more about Next.js, take a look at the following resources:
+- 📊 **Two View Modes**
+  - Table View
+  - Card View
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- ⏳ **Loading State**
+  - Spinner shown while fetching data
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- 🎨 **Responsive UI**
+  - Works on desktop and tablet
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🛠 Tech Stack
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Next.js 14 (App Router)**
+- **TypeScript**
+- **Tailwind CSS**
+- **Local API Routes**
+- **JSON Mock Data**
+
+---
+
+## 📂 Project Structure
+app
+api
+data
+route.ts
+
+components
+Search.tsx
+Filter.tsx
+TableView.tsx
+CardView.tsx
+Pagination.tsx
+
+data
+MOCK_DATA.json
+
+types
+patient.ts
+
+
+---
+
+## ⚙️ API Endpoint
+
+Local API is implemented using **Next.js Route Handlers**.
+
+Example request:
+/api/data?page=1&limit=10&search=zoe&sort=age_asc&issue=fever
+### Query Parameters
+
+| Parameter | Description |
+|----------|-------------|
+| page | Current page number |
+| limit | Records per page |
+| search | Search by patient name |
+| sort | age_asc / age_desc |
+| issue | Filter by medical issue |
+
+---
